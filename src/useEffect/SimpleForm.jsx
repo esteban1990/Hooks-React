@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { Message } from './Message';
 
 export const SimpleForm = () => {
 
@@ -58,14 +57,11 @@ export const SimpleForm = () => {
        name="email"
        placeholder='estevan@google.com'
        value={email}
-       onChange={onChange}
-       
+       onChange={onChange}       
        />
 
+
      
-     {
-      (username === "maximo")  && <Message/>
-     }
          
         
     </>

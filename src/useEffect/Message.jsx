@@ -1,15 +1,20 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 
 export const Message = () => {
 
-    useEffect(() => {
-        console.log("message mounted")
-        
-        return() => {
-        console.log("message unmounted")
+    const [coords, serCoords]  = useState({x:0, y :0})
 
+    useEffect(() => {
+        const mouseOnMove = ({x,y}) => {
+            serCoords({x,y})
         }
+        window.addEventListener("mousemove", mouseOnMove);
+        //para desmontar el useEffect
+        return () => {
+            window.removeEventListener("mousemove", mouseOnMove)
+        }
+
     },[]);
 
 
@@ -17,6 +22,7 @@ export const Message = () => {
     <>
     
     <h4>Usuario ya existe</h4>
+    {JSON.stringify(coords)}
     
     </>
   )
