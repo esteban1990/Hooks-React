@@ -4,14 +4,12 @@ import './index.css'
 import { HooksApp } from './HooksApp'
 import { CounterApp } from './useState/CounterApp'
 import { CounterWithCustomHook } from './useState/CounterWithCustomHook'
-import { SimpleForm } from './useEffect.jsx/SimpleForm'
+import { SimpleForm } from './useEffect/SimpleForm'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    {/* <CounterWithCustomHook/> */}
-    {/* <CounterApp/> */}
-    {/* <HooksApp/> */}
+  // <StrictMode>
+
     <SimpleForm/>
 
-  </StrictMode>,
+  // </StrictMode>,
 )

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Message } from './Message';
 
 export const SimpleForm = () => {
 
@@ -18,16 +19,21 @@ export const SimpleForm = () => {
       })
 
     }
+
+    //un arreglo vacio en el useEffect significa que se renderizara solo una vez
     useEffect(() => {
-        console.log("probando primer useEfffect")
+    //     console.log("probando primer useEfffect")
     }, [])
     
-    //   useEffect(() => {
+      useEffect(() => {
     //     console.log("holaaaa2")
-    // }, [formState])
+    }, [formState])
 
     useEffect(() => {
-        console.log("probando segundo useEffect")
+    //     console.log("probando segundo useEffect")
+    //     return () => {
+
+    //     }
     }, [email])
     
 
@@ -55,8 +61,12 @@ export const SimpleForm = () => {
        onChange={onChange}
        
        />
-        
-        
+
+     
+     {
+      (username === "maximo")  && <Message/>
+     }
+         
         
     </>
   )
