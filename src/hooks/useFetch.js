@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
+
+
+
 export const useFetch = (url) => {
     
     const [state,setState] = useState({
@@ -14,7 +17,17 @@ export const useFetch = (url) => {
    
     },[url])
 
+    const setLoadingState = () => {
+        setState({
+            data: null,
+            isLoading:true,
+            hasError:false,
+            error:null
+        })
+    }
+
     const getFetch = async() => {
+        setLoadingState();
         const resp = await fetch(url);
         
         //sleep
@@ -38,7 +51,7 @@ export const useFetch = (url) => {
         // console.log({data})
         setState({
             data: data,
-            isLoading:true,
+            isLoading:false,
             hasError:false,
             error:null
         })

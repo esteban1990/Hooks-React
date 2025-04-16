@@ -20,6 +20,10 @@ export const MultipleCustomHooks = () => {
     <h3>MultipleCustomHooks</h3>
 
     { 
+        isLoading
+        ? <LoadedMessage/>
+        :
+
       <PokemonCard id={counter}
                   name={data?.name}
                   sprites= {[
