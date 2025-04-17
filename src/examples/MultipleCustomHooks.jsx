@@ -9,7 +9,7 @@ import { PokemonCard } from './PokemonCard';
 
 export const MultipleCustomHooks = () => {
 
-    const {counter,addCounter,restCounter } = useCounter(1)
+    const {counter,addCounter,restCounter, resetCounter } = useCounter(1)
     
    const {data,isLoading,hasError} = useFetch (`https://pokeapi.co/api/v2/pokemon/${counter}`);
   //  console.log({data})
@@ -38,8 +38,9 @@ export const MultipleCustomHooks = () => {
     }   
 
     <p>{data?.name}</p>
-    <button className='btn btn-primary' onClick={() => counter > 1 ? restCounter(1) : null}>Anterioor</button>
+    <button className='btn btn-primary' onClick={() => counter > 1 ? restCounter(1) : null}>Anterior</button>
     <button className='btn btn-primary' onClick={() => addCounter(1)}>Siguiente</button>
+    <button className='btn btn-primary' onClick={() => resetCounter()}>Reset</button>
     
     </>
   )
