@@ -7,11 +7,12 @@ import { CounterWithCustomHook } from './useState/CounterWithCustomHook'
 import { SimpleForm } from './useEffect/SimpleForm'
 import { FormWithCustomHook } from './useEffect/FormWithCustomHooks'
 import { MultipleCustomHooks } from './examples/MultipleCustomHooks'
+import { FocusScreen } from './useRef/FocusScreen'
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
 
-  <MultipleCustomHooks/>
+  <FocusScreen/>
 
   // {/* </StrictMode>, */}
 )

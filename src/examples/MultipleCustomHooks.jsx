@@ -9,7 +9,7 @@ import { PokemonCard } from './PokemonCard';
 
 export const MultipleCustomHooks = () => {
 
-    const {counter,addCounter,restCounter, resetCounter,eliminarPorId } = useCounter(1)
+    const {counter,addCounter,restCounter, resetCounter, eliminarPorId } = useCounter(1)
     
    const {data,isLoading,hasError} = useFetch (`https://pokeapi.co/api/v2/pokemon/${counter}`); 
  
