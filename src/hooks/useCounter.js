@@ -15,6 +15,15 @@ export const useCounter = (initialValue=10) => {
         setCounter(initialValue)
     }
 
+    
+  const eliminarPorId = (counter) => {
+    const nuevosItems = counter.filter(items => items.id !== counter);
+    setCounter(nuevosItems);
+  } 
+    
+
+  
+
 
 
 
@@ -22,6 +31,7 @@ export const useCounter = (initialValue=10) => {
     counter,
     addCounter,
     restCounter,
-    resetCounter
+    resetCounter,
+    eliminarPorId
     }
 }

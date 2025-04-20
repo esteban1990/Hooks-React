@@ -56,7 +56,7 @@ export const useFetch = (url) => {
                 isLoading:false,
                 hasError:true,
                 error:{
-                    cocde: resp.status,
+                    code: resp.status,
                     messsage:resp.statusText,
                 }
             });
