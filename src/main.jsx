@@ -11,11 +11,12 @@ import { FocusScreen } from './useRef/FocusScreen'
 import { Layout } from './useLayoutEffect/Layout'
 import { Memorize } from './memos/Memorize'
 import { MemoHook } from './memos/MemoHook'
+import { CallbackHook } from './memos/CallbackHook'
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
 
- <MemoHook/>
+  <CallbackHook/>
 
   // {/* </StrictMode>, */}
 )
