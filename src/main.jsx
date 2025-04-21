@@ -12,11 +12,11 @@ import { Layout } from './useLayoutEffect/Layout'
 import { Memorize } from './memos/Memorize'
 import { MemoHook } from './memos/MemoHook'
 import { CallbackHook } from './memos/CallbackHook'
+import { Padre } from './07-tarea-memo/Padre'
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
-
-  <CallbackHook/>
+  <Padre/>
 
   // {/* </StrictMode>, */}
 )
