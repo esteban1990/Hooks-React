@@ -8,8 +8,8 @@ export const Padre = () => {
     const [valor, setValor] = useState(0);
     
 
-   const incrementarFather2 =  useCallback((numero) => {
-        setValor((oldValue) => oldValue + numero);
+   const incrementarFather2 =  useCallback((num) => {
+        setValor((oldValue) => oldValue + num);
     }, []);
     
 

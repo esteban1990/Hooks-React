@@ -14,9 +14,11 @@ import { MemoHook } from './memos/MemoHook'
 import { CallbackHook } from './memos/CallbackHook'
 import { Padre } from './07-tarea-memo/Padre'
 
-createRoot(document.getElementById('root')).render(
+import "./useReducer/intro-reducer"
+
+// createRoot(document.getElementById('root')).render(
   // <StrictMode>
-  <Padre/>
+
 
   // {/* </StrictMode>, */}
-)
+// )
