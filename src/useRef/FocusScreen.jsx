@@ -12,7 +12,7 @@ export const FocusScreen = () => {
 
   return (
     <>
-    <h1>FocusScreen</h1>
+    <h2>FocusScreen</h2>
     <hr/>
     <input  ref={inputRef}
             type="text"
